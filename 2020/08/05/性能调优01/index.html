@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yudading.github.io">
-  <title>Archives: 2020/7 | 大丁的技术博客</title>
+  <title>性能调优01 | 大丁的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="拥抱技术，跳出六道">
-<meta property="og:type" content="website">
-<meta property="og:title" content="大丁的技术博客">
-<meta property="og:url" content="https://yudading.github.io/archives/2020/07/index.html">
+  <meta name="description" content="性能调优您好，我是大丁，这次和大家聊聊有关性能调忧，性能调优是一个很大的领域也包括了很多相关的概念，今天先说三个重要的概念，就是进程、线程、和协程。 进程定义 狭义定义：进程是正在运行的程序的实例（an instance of a computer program that is being executed）。   广义定义：进程是一个具有一定独立功能的程序关于某个数据集合的一次运行活动。它">
+<meta property="og:type" content="article">
+<meta property="og:title" content="性能调优01">
+<meta property="og:url" content="https://yudading.github.io/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/index.html">
 <meta property="og:site_name" content="大丁的技术博客">
-<meta property="og:description" content="拥抱技术，跳出六道">
+<meta property="og:description" content="性能调优您好，我是大丁，这次和大家聊聊有关性能调忧，性能调优是一个很大的领域也包括了很多相关的概念，今天先说三个重要的概念，就是进程、线程、和协程。 进程定义 狭义定义：进程是正在运行的程序的实例（an instance of a computer program that is being executed）。   广义定义：进程是一个具有一定独立功能的程序关于某个数据集合的一次运行活动。它">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yudading.github.io/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/2058.png">
+<meta property="article:published_time" content="2020-08-05T13:19:35.000Z">
+<meta property="article:modified_time" content="2020-08-05T14:23:20.602Z">
 <meta property="article:author" content="大丁">
-<meta property="article:tag" content="大丁 技术 生活">
+<meta property="article:tag" content="进程">
+<meta property="article:tag" content="线程">
+<meta property="article:tag" content="协程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yudading.github.io/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/2058.png">
   
     <link rel="alternative" href="/atom.xml" title="大丁的技术博客" type="application/atom+xml">
   
@@ -171,77 +177,296 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-性能调优01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/22/DevOps-01/" class="archive-article-date">
-  	<time datetime="2020-07-21T16:30:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/DevOps-01/">DevOps_01 DevOps是什么？</a>
+    <h1 class="article-title" itemprop="name">
+      性能调优01
     </h1>
   
 
-        <div class="article-info info-on-right">
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+               阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
           
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+
+<a href="/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/" class="archive-article-date">
+  	<time datetime="2020-08-05T13:19:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29004400&auto=0&height=66"></iframe>
+
+<h1 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h1><p>您好，我是大丁，这次和大家聊聊有关性能调忧，性能调优是一个很大的领域也包括了很多相关的概念，今天先说三个重要的概念，就是进程、线程、和协程。</p>
+<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>狭义定义：进程是正在运行的程序的实例（an instance of a computer program that is being executed）。</p>
+</blockquote>
+<blockquote>
+<p>广义定义：进程是一个具有一定独立功能的程序关于某个数据集合的一次运行活动。它是操作系统动态执行的基本单元，在传统的操作系统中，进程既是基本的分配单元，也是基本的执行单元。</p>
+</blockquote>
+<blockquote>
+<p>进程的概念主要有两点：第一，进程是一个实体。每一个进程都有它自己的地址空间，一般情况下，包括文本区域（text region）、数据区域（data region）和堆栈（stack region）。文本区域存储处理器执行的代码；数据区域存储变量和进程执行期间使用的动态分配的内存；堆栈区域存储着活动过程调用的指令和本地变量。第二，进程是一个“执行中的程序”。程序是一个没有生命的实体，只有处理器赋予程序生命时（操作系统执行之），它才能成为一个活动的实体，我们称其为进程。 [3]<br>进程是操作系统中最基本、重要的概念。是多道程序系统出现后，为了刻画系统内部出现的动态情况，描述系统内部各道程序的活动规律引进的一个概念,所有多道程序设计操作系统都建立在进程的基础上。</p>
+</blockquote>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p><strong>操作系统引入进程的概念的原因:</strong><br>从理论角度看，是对正在运行的程序过程的抽象；<br>从实现角度看，是一种数据结构，目的在于清晰地刻画动态系统的内在规律，有效管理和调度进入计算机系统主存储器运行的程序。<br>特征</p>
+<ul>
+<li>动态性：进程的实质是程序在多道程序系统中的一次执行过程，进程是动态产生，动态消亡的。</li>
+<li>并发性：任何进程都可以同其他进程一起并发执行</li>
+<li>独立性：进程是一个能独立运行的基本单位，同时也是系统分配资源和调度的独立单位；</li>
+<li>异步性：由于进程间的相互制约，使进程具有执行的间断性，即进程按各自独立的、不可预知的速度向前推进</li>
+<li>结构特征：进程由程序、数据和进程控制块三部分组成。</li>
+</ul>
+<p>多个不同的进程可以包含相同的程序：一个程序在不同的数据集里就构成不同的进程，能得到不同的结果；但是执行过程中，程序不能发生改变。</p>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p><strong>线程</strong>（英语：thread）是操作系统能够进行运算调度的最小单位。它被包含在进程之中，是进程中的实际运作单位。一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p>
+<p>在Unix System V及SunOS中也被称为轻量进程（lightweight processes），但轻量进程更多指内核线程（kernel thread），而把用户线程（user thread）称为线程。<br>线程是独立调度和分派的基本单位。线程可以为操作系统内核调度的内核线程，如Win32线程；</p>
+<p>由用户进程自行调度的用户线程，如Linux平台的POSIX Thread；或者由内核与用户进程，如Windows 7的线程，进行混合调度。</p>
+<p>同一进程中的多条线程将共享该进程中的全部系统资源，如虚拟地址空间，文件描述符和信号处理等等。但同一进程中的多个线程有各自的调用栈（call stack），自己的寄存器环境（register context），自己的线程本地存储（thread-local storage）。</p>
+<p>一个进程可以有很多线程，每条线程并行执行不同的任务。</p>
+<p>在多核或多CPU，或支持Hyper-threading的CPU上使用多线程程序设计的好处是显而易见，即提高了程序的执行吞吐率。在单CPU单核的计算机上，使用多线程技术，也可以把进程中负责I/O处理、人机交互而常被阻塞的部分与密集计算的部分分开来执行，编写专门的workhorse线程执行密集计算，从而提高了程序的执行效率。</p>
+<h3 id="与进程比较"><a href="#与进程比较" class="headerlink" title="与进程比较"></a>与进程比较</h3><p><strong>线程与进程的区别可以归纳为以下4点：</strong></p>
+<ol>
+<li>地址空间和其它资源（如打开文件）：进程间相互独立，同一进程的各线程间共享。某进程内的线程在其它进程不可见。</li>
+<li>通信：进程间通信IPC，线程间可以直接读写进程数据段（如全局变量）来进行通信——需要进程同步和互斥手段的辅助，以保证数据的一致性。</li>
+<li>调度和切换：线程上下文切换比进程上下文切换要快得多。</li>
+<li>在多线程OS中，进程不是一个可执行的实体。</li>
+</ol>
+<h2 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><strong>协程</strong>不是进程或线程，其执行过程更类似于子例程，或者说不带返回值的函数调用。</p>
+<p>一个程序可以包含多个协程，可以对比与一个进程包含多个线程，因而下面我们来比较协程和线程。</p>
+<p>我们知道多个线程相对独立，有自己的上下文，切换受系统控制；而协程也相对独立，有自己的上下文，<br>但是其切换由自己控制，由当前协程切换到其他协程由当前协程来控制。</p>
+<p>看一下三者的关系：</p>
+<p><img src="/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/2058.png" alt="2058"></p>
+<h3 id="举生活中的例子"><a href="#举生活中的例子" class="headerlink" title="举生活中的例子"></a>举生活中的例子</h3><p><strong>进程、线程、协程对比 :</strong></p>
+<ul>
+<li><p>有一个老板想要开个工厂进行生产某件商品（例如剪子）</p>
+</li>
+<li><p>他需要花一些财力物力制作一条生产线，这个生产线上有很多的器件以及材料这些所有的为了能够生产剪子而准备的资源称之为：进程</p>
+</li>
+<li><p>只有生产线是不能够进行生产的，所以老板的找个工人来进行生产，这个工人能够利用这些材料最终一步步的将剪子做出来，这个来做事情的工人称之为：线程</p>
+</li>
+<li><p>这个老板为了提高生产率，想到3种办法：</p>
+</li>
+</ul>
+<p>在这条生产线上多招些工人，一起来做剪子，这样效率是成倍増长，即单进程 多线程方式</p>
+<p>老板发现这条生产线上的工人不是越多越好，因为一条生产线的资源以及材料毕竟有限，所以老板又花了些财力物力购置了另外一条生产线，然后再招些工人这样效率又再一步提高了，即多进程 多线程方式</p>
+<p>老板发现，现在已经有了很多条生产线，并且每条生产线上已经有很多工人了（即程序是多进程的，每个进程中又有多个线程），为了再次提高效率，老板想了个损招，规定：如果某个员工在上班时临时没事或者再等待某些条件（比如等待另一个工人生产完某道工序之后他才能再次工作）。</p>
+<p>那么这个员工就利用这个时间去做其它的事情，那么也就是说：如果一个线程等待某些条件，可以充分利用这个时间去做其它事情，其实这就是：<strong>协程方式</strong></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>准备工作：创建一个APP，延迟3秒后输出‘hello’.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask     # pip install flask</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">app &#x3D; Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(&#39;&#x2F;&#39;)</span><br><span class="line">def index():</span><br><span class="line">    time.sleep(3)    		# 休眠 3 秒再返回结果</span><br><span class="line">    return &#39;Hello!&#39;</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    app.run(threaded&#x3D;True)  # 以多线程模式启动服务</span><br></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import time</span><br><span class="line"># 用于多进程</span><br><span class="line">from multiprocessing import Process</span><br><span class="line"># 用于多线程</span><br><span class="line">from threading import Thread</span><br><span class="line"># 用于协程+异步</span><br><span class="line">import asyncio</span><br><span class="line">import aiohttp      # pip install aiohttp</span><br><span class="line"></span><br><span class="line">urls &#x3D; [&#39;http:&#x2F;&#x2F;127.0.0.1:5000&#39; for _ in range(10)]</span><br><span class="line"></span><br><span class="line">def get_html_text(url):</span><br><span class="line">    response &#x3D; requests.get(url)</span><br><span class="line">    return response.text</span><br><span class="line"></span><br><span class="line"># 单进程</span><br><span class="line">start &#x3D; time.time()</span><br><span class="line">for url in urls:</span><br><span class="line">    result &#x3D; get_html_text(url)</span><br><span class="line">    print(result)</span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(&#39;【单进程单线程】耗时：%s 秒&#39; %(end - start))</span><br><span class="line"></span><br><span class="line"># 多进程 + 并行</span><br><span class="line">start &#x3D; time.time()</span><br><span class="line">processes &#x3D; []</span><br><span class="line">for url in urls:</span><br><span class="line">    p &#x3D; Process(target&#x3D;get_html_text, args&#x3D;(url,))</span><br><span class="line">    processes.append(p)</span><br><span class="line">    p.start()</span><br><span class="line">for p in processes:</span><br><span class="line">    p.join()</span><br><span class="line">    print(&#39;Hello!&#39;)</span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(&#39;【多进程  并行】耗时：%s 秒&#39; %(end - start))</span><br><span class="line"></span><br><span class="line"># 多线程 + 并发</span><br><span class="line">start &#x3D; time.time()</span><br><span class="line">threads &#x3D; []</span><br><span class="line">for url in urls:</span><br><span class="line">    t &#x3D; Thread(target&#x3D;get_html_text, args&#x3D;(url,))</span><br><span class="line">    threads.append(t)</span><br><span class="line">    t.start()</span><br><span class="line">for t in threads:</span><br><span class="line">    t.join()</span><br><span class="line">    print(&#39;Hello!&#39;)</span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(&#39;【多线程  并发】耗时：%s 秒&#39; %(end - start))</span><br><span class="line"></span><br><span class="line"># 协程 + 异步</span><br><span class="line"># 因为 requests 模块不支持异步操作，需要借助 aiohttp 模块</span><br><span class="line">async def get_html_text_async(url):</span><br><span class="line">    async with aiohttp.ClientSession() as session:</span><br><span class="line">        async with session.get(url) as response:</span><br><span class="line">            text &#x3D; await response.text()</span><br><span class="line">            return text</span><br><span class="line"></span><br><span class="line">start &#x3D; time.time()</span><br><span class="line">tasks &#x3D; [asyncio.ensure_future(get_html_text_async(url)) for url in urls]</span><br><span class="line">loop &#x3D; asyncio.get_event_loop()</span><br><span class="line">loop.run_until_complete(asyncio.wait(tasks))</span><br><span class="line">for task in tasks:</span><br><span class="line">    print(task.result())</span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(&#39;【协程 ++ 异步】耗时：%s 秒&#39; %(end - start))</span><br></pre></td></tr></table></figure>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【单进程单线程】耗时：30.076159238815308 秒</span><br><span class="line">【多进程  并行】耗时：31.149558782577515 秒</span><br><span class="line">【多线程  并发】耗时：3.0131824016571045 秒</span><br><span class="line">【协程 ++ 异步】耗时：3.0092201232910156 秒</span><br></pre></td></tr></table></figure>
+
+<h3 id="相关内容链接"><a href="#相关内容链接" class="headerlink" title="相关内容链接"></a>相关内容链接</h3><p><a href="https://blog.csdn.net/hairetz/article/details/16119911" target="_blank" rel="noopener">csdn</a></p>
+<p><a href="https://blog.csdn.net/daaikuaichuan/article/details/82951084" target="_blank" rel="noopener">csdn</a></p>
+<p><a href="https://juejin.im/post/6844903607892967432" target="_blank" rel="noopener">掘金</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的人生从此与众不同<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/154.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/033.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">DevOps</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">进程</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">DevOps是什么？</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">协程</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/DevOps//" class="article-tag-list-link color2">DevOps</a>
+        			<a href="/categories/性能调优01//" class="article-tag-list-link color2">性能调优01</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/08/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          C语言学习笔记-01
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/07/22/DevOps-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DevOps_01 DevOps是什么？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#性能调优"><span class="toc-number">1.</span> <span class="toc-text">性能调优</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#进程"><span class="toc-number">1.1.</span> <span class="toc-text">进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-number">1.1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">1.1.2.</span> <span class="toc-text">原因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程"><span class="toc-number">1.2.</span> <span class="toc-text">线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#与进程比较"><span class="toc-number">1.2.1.</span> <span class="toc-text">与进程比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协程"><span class="toc-number">1.3.</span> <span class="toc-text">协程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#举生活中的例子"><span class="toc-number">1.3.2.</span> <span class="toc-text">举生活中的例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">1.4.</span> <span class="toc-text">代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number">1.4.1.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结果"><span class="toc-number">1.4.2.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关内容链接"><span class="toc-number">1.4.3.</span> <span class="toc-text">相关内容链接</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -276,8 +501,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
