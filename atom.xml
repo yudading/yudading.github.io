@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-07T08:22:06.378Z</updated>
+  <updated>2020-08-07T08:50:08.126Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kubernetes03</title>
+    <link href="https://yudading.github.io/2020/08/07/Kubernetes03/"/>
+    <id>https://yudading.github.io/2020/08/07/Kubernetes03/</id>
+    <published>2020-08-07T08:33:20.000Z</published>
+    <updated>2020-08-07T08:50:08.126Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=17406299&auto=1&height=66"></iframe><h1 id="Kubernetes布署"><a href="#Kubernetes布署" class="headerlink" title="Kubernetes布署"></a>Kubernetes布署</h1><h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul><li>下载安装 k8s 指定的版本</li><li>64 位的 Linux 操作系统、3.10 及以上的内核版本，注意有些linux系统要做内核升级才能安装成功</li><li>拉取镜像要加入阿里的配置镜像链接，否则很慢或失败</li><li>最好2 核 CPU、8 GB 内存以上的配置，用VMware、物理机、云主机均可，但不要太小，否则安装时直接报错</li></ul><h2 id="具体步骤："><a href="#具体步骤：" class="headerlink" title="具体步骤："></a>具体步骤：</h2><ul><li>在所有节点上安装 Docker 和 kubeadm；可选择工具安装和二进制安装，但生产中不建义用二进制</li><li>部署 Kubernetes Master；可以是一个节点，生产中建义用集群</li><li>部署容器网络插件；一定要安装网络插件，否则无法访问</li><li>部署 Kubernetes Worker；</li><li>部署 Dashboard 可视化插件；可视化插件有一个Web本看界面，虽然一直在完善</li><li>部署容器存储插件，一定要用的</li></ul><p>安装中用编写YAML文件，用工具生成就可以了，具体实现安装我会稍后把文档分享给大家。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="Kubernetes" scheme="https://yudading.github.io/categories/Kubernetes/"/>
+    
+    
+      <category term="k8s布署" scheme="https://yudading.github.io/tags/k8s%E5%B8%83%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Kubernetes02</title>
