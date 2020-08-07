@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-07T07:56:42.785Z</updated>
+  <updated>2020-08-07T08:22:06.378Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kubernetes02</title>
+    <link href="https://yudading.github.io/2020/08/07/Kubernetes02/"/>
+    <id>https://yudading.github.io/2020/08/07/Kubernetes02/</id>
+    <published>2020-08-07T08:00:06.000Z</published>
+    <updated>2020-08-07T08:22:06.378Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=18688793&auto=1&height=66"></iframe><p>大家好，我是大丁，接着聊一下 Kubernetes 的本质是什么？</p><h1 id="Kubernetes本质"><a href="#Kubernetes本质" class="headerlink" title="Kubernetes本质"></a>Kubernetes本质</h1><h2 id="容器实现技术"><a href="#容器实现技术" class="headerlink" title="容器实现技术"></a>容器实现技术</h2><p>三种技术构建出来的进程的隔离环境：</p><ul><li>Linux Namespace、</li><li>Linux Cgroups </li><li>rootfs </li></ul><p>容器其实可以分为两个部分：容器运行时和容器镜像</p><p>一个正在运行的 Linux 容器，其实可以被“一分为二”地看待：</p><ul><li>一组联合挂载在 /var/lib/docker/aufs/mnt 上的 rootfs，这一部分我们称为“容器镜像”（Container Image），是容器的静态视图；</li><li>一个由 Namespace+Cgroups 构成的隔离环境，这一部分我们称为“容器运行时”（Container Runtime），是容器的动态视图。</li></ul><h2 id="k8s设计思想"><a href="#k8s设计思想" class="headerlink" title="k8s设计思想"></a>k8s设计思想</h2><p>从宏观的角度用统一的方式定义任务之间的关系</p><h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><ul><li>Master 控制节点</li><li>Node 计算节点</li></ul><p>Master 节点，由三个紧密协作的独立组件组合而成，它们分别是负责 API 服务的 kube-apiserver、负责调度的 kube-scheduler，以及负责容器编排的 kube-controller-manager。</p><p>整个集群的持久化数据，则由 kube-apiserver 处理后保存在 Etcd 中。</p><p>计算节点上最核心的部分，则是一个叫作 kubelet 的组件。</p><h3 id="kubelet"><a href="#kubelet" class="headerlink" title="kubelet"></a>kubelet</h3><ul><li>kubelet 主要负责同容器运行时（比如 Docker 项目）打交道</li><li>kubelet 还通过 gRPC 协议同一个叫作 Device Plugin 的插件进行交互。</li><li>调用网络插件和存储插件为容器配置网络和持久化存储。</li></ul><p><strong>Kubernetes 运行在Docker之上，它 的本质，是为用户提供一个具有普遍意义的容器编排工具</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="Kubernetes" scheme="https://yudading.github.io/categories/Kubernetes/"/>
+    
+    
+      <category term="Kubernetes 本质" scheme="https://yudading.github.io/tags/Kubernetes-%E6%9C%AC%E8%B4%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Kubernetes01</title>

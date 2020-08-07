@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yudading.github.io">
-  <title>数据中台01 | 大丁的技术博客</title>
+  <title>Kubernetes02 | 大丁的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="您好，我是大丁，和大家说说数据中台。 中台近几年兴起，搞技术的人对什么是中台都有个自的看法和想法，我这里简单说说。 中台的出现中台这个词最早来自2015年的阿里的战略概念，原因是马云拜访了一家芬兰的公司Supercell,而这家公司采用了一种“开发者领导”模式，就是细分小团队来开发游戏，提高速度推出公测版，可以说这是一种组织结构的重组和变革方式。 中台能做什么？可以理解是前台与后台中间的一个协">
+  <meta name="description" content="大家好，我是大丁，接着聊一下 Kubernetes 的本质是什么？ Kubernetes本质容器实现技术三种技术构建出来的进程的隔离环境：  Linux Namespace、 Linux Cgroups  rootfs   容器其实可以分为两个部分：容器运行时和容器镜像 一个正在运行的 Linux 容器，其实可以被“一分为二”地看待：  一组联合挂载在 &#x2F;var&#x2F;lib&#x2F;docker&#x2F;aufs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据中台01">
-<meta property="og:url" content="https://yudading.github.io/2020/08/06/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B001/index.html">
+<meta property="og:title" content="Kubernetes02">
+<meta property="og:url" content="https://yudading.github.io/2020/08/07/Kubernetes02/index.html">
 <meta property="og:site_name" content="大丁的技术博客">
-<meta property="og:description" content="您好，我是大丁，和大家说说数据中台。 中台近几年兴起，搞技术的人对什么是中台都有个自的看法和想法，我这里简单说说。 中台的出现中台这个词最早来自2015年的阿里的战略概念，原因是马云拜访了一家芬兰的公司Supercell,而这家公司采用了一种“开发者领导”模式，就是细分小团队来开发游戏，提高速度推出公测版，可以说这是一种组织结构的重组和变革方式。 中台能做什么？可以理解是前台与后台中间的一个协">
+<meta property="og:description" content="大家好，我是大丁，接着聊一下 Kubernetes 的本质是什么？ Kubernetes本质容器实现技术三种技术构建出来的进程的隔离环境：  Linux Namespace、 Linux Cgroups  rootfs   容器其实可以分为两个部分：容器运行时和容器镜像 一个正在运行的 Linux 容器，其实可以被“一分为二”地看待：  一组联合挂载在 &#x2F;var&#x2F;lib&#x2F;docker&#x2F;aufs">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-06T03:47:28.000Z">
-<meta property="article:modified_time" content="2020-08-06T04:35:23.846Z">
+<meta property="article:published_time" content="2020-08-07T08:00:06.000Z">
+<meta property="article:modified_time" content="2020-08-07T08:22:06.378Z">
 <meta property="article:author" content="大丁">
-<meta property="article:tag" content="什么是中台">
+<meta property="article:tag" content="Kubernetes 本质">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="大丁的技术博客" type="application/atom+xml">
@@ -173,14 +173,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据中台01" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Kubernetes02" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据中台01
+      Kubernetes02
     </h1>
   
 
@@ -202,43 +202,43 @@
 	</span>
 
 
-<a href="/2020/08/06/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B001/" class="archive-article-date">
-  	<time datetime="2020-08-06T03:47:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
+<a href="/2020/08/07/Kubernetes02/" class="archive-article-date">
+  	<time datetime="2020-08-07T08:00:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=16661917&auto=1&height=66"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=18688793&auto=1&height=66"></iframe>
 
-<p>您好，我是大丁，和大家说说数据中台。</p>
-<p>中台近几年兴起，搞技术的人对什么是中台都有个自的看法和想法，我这里简单说说。</p>
-<h2 id="中台的出现"><a href="#中台的出现" class="headerlink" title="中台的出现"></a>中台的出现</h2><p>中台这个词最早来自2015年的阿里的战略概念，原因是马云拜访了一家芬兰的公司Supercell,而这家公司采用了一种“开发者领导”模式，就是细分小团队来开发游戏，提高速度推出公测版，可以说这是一种组织结构的重组和变革方式。</p>
-<h2 id="中台能做什么？"><a href="#中台能做什么？" class="headerlink" title="中台能做什么？"></a>中台能做什么？</h2><p>可以理解是前台与后台中间的一个协调，转化前方市场与内部支撑的冲突，在前台与后台之间做一个战略性的缓冲和加固，它可以打破企业内部的壁垒，加大提高效率。中台分很多，有业务中台、组织中台、数据中台等等。都是针对某一方面基本理念不变的情况下做出的一种改革。本质上来说，依然是一种服务。</p>
-<p>举个例子，现在猪肉价钱不低，市场不错，有需求量，所以你决定养猪，这样你要了解市场</p>
+<p>大家好，我是大丁，接着聊一下 Kubernetes 的本质是什么？</p>
+<h1 id="Kubernetes本质"><a href="#Kubernetes本质" class="headerlink" title="Kubernetes本质"></a>Kubernetes本质</h1><h2 id="容器实现技术"><a href="#容器实现技术" class="headerlink" title="容器实现技术"></a>容器实现技术</h2><p>三种技术构建出来的进程的隔离环境：</p>
 <ul>
-<li>什么样的人对猪肉需要量高</li>
-<li>超市需要什么样处理的猪肉</li>
-<li>菜市场需要什么样的猪肉</li>
-<li>有哪些工厂对猪肉再次做再加工</li>
-<li>哪个地区的需求量高而且还有特殊要求</li>
+<li>Linux Namespace、</li>
+<li>Linux Cgroups </li>
+<li>rootfs </li>
 </ul>
-<p>凡此等等，都是前方前台的一系列要求</p>
-<p>了解了需求以后就要计算自己的能力有多大？能做成什么规模，是不是要针对某一类人做生产，还是对所有消费者都提供猪肉呢？都要计算到。</p>
-<p>这时就要看自己是家庭形式养猪呢，还是做工厂招大量的员工来养猪，这里就要做好前期的投入，人员的培训，做章程，等等很多工作了。</p>
-<p>针对消费者，是不是只负责养猪，还是做一条龙的服务呢？对于超市的需求我们做一条线，对于菜市场的人也需要一条生产线，但是怎么能最大化提高效率呢？这就是中台。</p>
-<p>可以想像为前台有种种不断的要求，中台就像一块海棉，吸收进来后还要排出去给生产的所有相关环节，不只是一种简单的对接，而且对所以需要进行计算，细化，分类，转接成一种标准。</p>
-<p>举了一个养猪的例子做一个类比吧，如果你参加中台建设落地后，想必你对中台会有更深的理解。</p>
-<h2 id="数据中台不是数据平台"><a href="#数据中台不是数据平台" class="headerlink" title="数据中台不是数据平台"></a>数据中台不是数据平台</h2><p>数据中台不是数据平台，数据平台提供了是各种结构化、非结构化的数据集，而数据中台是在数据平台之上，完成企业数据到业务价值的转变。</p>
-<h2 id="数据中台与微服务"><a href="#数据中台与微服务" class="headerlink" title="数据中台与微服务"></a>数据中台与微服务</h2><p>数据中台方向上为了满足前端带来的各种需求；而微服务是后端各种对象的整合。</p>
-<h2 id="对于中台的定义"><a href="#对于中台的定义" class="headerlink" title="对于中台的定义"></a>对于中台的定义</h2><p>ThoughtWorks首席咨询师王健对中台的定义是：<strong>企业级能力复用平台</strong>，它包括：企业级、能力、复用及平台。</p>
+<p>容器其实可以分为两个部分：容器运行时和容器镜像</p>
+<p>一个正在运行的 Linux 容器，其实可以被“一分为二”地看待：</p>
 <ul>
-<li>企业级说明了中台范围</li>
-<li>能力说明了承载的对象</li>
-<li>复用说明了中台的核心价值</li>
-<li>平台说明了中台的主要形式</li>
+<li>一组联合挂载在 /var/lib/docker/aufs/mnt 上的 rootfs，这一部分我们称为“容器镜像”（Container Image），是容器的静态视图；</li>
+<li>一个由 Namespace+Cgroups 构成的隔离环境，这一部分我们称为“容器运行时”（Container Runtime），是容器的动态视图。</li>
 </ul>
+<h2 id="k8s设计思想"><a href="#k8s设计思想" class="headerlink" title="k8s设计思想"></a>k8s设计思想</h2><p>从宏观的角度用统一的方式定义任务之间的关系</p>
+<h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><ul>
+<li>Master 控制节点</li>
+<li>Node 计算节点</li>
+</ul>
+<p>Master 节点，由三个紧密协作的独立组件组合而成，它们分别是负责 API 服务的 kube-apiserver、负责调度的 kube-scheduler，以及负责容器编排的 kube-controller-manager。</p>
+<p>整个集群的持久化数据，则由 kube-apiserver 处理后保存在 Etcd 中。</p>
+<p>计算节点上最核心的部分，则是一个叫作 kubelet 的组件。</p>
+<h3 id="kubelet"><a href="#kubelet" class="headerlink" title="kubelet"></a>kubelet</h3><ul>
+<li>kubelet 主要负责同容器运行时（比如 Docker 项目）打交道</li>
+<li>kubelet 还通过 gRPC 协议同一个叫作 Device Plugin 的插件进行交互。</li>
+<li>调用网络插件和存储插件为容器配置网络和持久化存储。</li>
+</ul>
+<p><strong>Kubernetes 运行在Docker之上，它 的本质，是为用户提供一个具有普遍意义的容器编排工具</strong></p>
 
       
 
@@ -283,7 +283,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">什么是中台</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Kubernetes 本质</a>
         		</li>
       		
 		</ul>
@@ -295,7 +295,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/数据中台//" class="article-tag-list-link color5">数据中台</a>
+        			<a href="/categories/Kubernetes//" class="article-tag-list-link color1">Kubernetes</a>
         		</li>
       		
 		</ul>
@@ -350,7 +350,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/2020/08/06/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B001/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/2020/08/07/Kubernetes02/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -364,18 +364,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          算法与数据结构01
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C语言学习笔记-01</div>
+    <a href="/2020/08/07/Kubernetes01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Kubernetes01</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -402,7 +393,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#中台的出现"><span class="toc-number">1.</span> <span class="toc-text">中台的出现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#中台能做什么？"><span class="toc-number">2.</span> <span class="toc-text">中台能做什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据中台不是数据平台"><span class="toc-number">3.</span> <span class="toc-text">数据中台不是数据平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据中台与微服务"><span class="toc-number">4.</span> <span class="toc-text">数据中台与微服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对于中台的定义"><span class="toc-number">5.</span> <span class="toc-text">对于中台的定义</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kubernetes本质"><span class="toc-number">1.</span> <span class="toc-text">Kubernetes本质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#容器实现技术"><span class="toc-number">1.1.</span> <span class="toc-text">容器实现技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#k8s设计思想"><span class="toc-number">1.2.</span> <span class="toc-text">k8s设计思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架构设计"><span class="toc-number">1.3.</span> <span class="toc-text">架构设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#kubelet"><span class="toc-number">1.3.1.</span> <span class="toc-text">kubelet</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
