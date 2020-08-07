@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yudading.github.io">
-  <title>Archives: 2020 | 大丁的技术博客</title>
+  <title>算法与数据结构01 | 大丁的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="拥抱技术，跳出六道">
-<meta property="og:type" content="website">
-<meta property="og:title" content="大丁的技术博客">
-<meta property="og:url" content="https://yudading.github.io/archives/2020/index.html">
+  <meta name="description" content="您好，我是大丁，今天说一说算法和数据结构。 我打赌写程序的你，包括你身边的，可能对算法和数据结构的掌握情况可以只限于“学过”。 而且很多人在工作中都几乎不用，编好的程序只要没有bug，能运行，功能上能实现就算是OK了。 从来没有想过怎么优化代码，上线后是否会对服务器造成多大的影响，都不会认真考虑，我为什么知道呢？因为我做过运维，哈哈！ 数据结构和算法是一项基本功，学好了无往不利。这是让人提升的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法与数据结构01">
+<meta property="og:url" content="https://yudading.github.io/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="大丁的技术博客">
-<meta property="og:description" content="拥抱技术，跳出六道">
+<meta property="og:description" content="您好，我是大丁，今天说一说算法和数据结构。 我打赌写程序的你，包括你身边的，可能对算法和数据结构的掌握情况可以只限于“学过”。 而且很多人在工作中都几乎不用，编好的程序只要没有bug，能运行，功能上能实现就算是OK了。 从来没有想过怎么优化代码，上线后是否会对服务器造成多大的影响，都不会认真考虑，我为什么知道呢？因为我做过运维，哈哈！ 数据结构和算法是一项基本功，学好了无往不利。这是让人提升的">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yudading.github.io/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0313.png">
+<meta property="article:published_time" content="2020-08-07T02:26:47.000Z">
+<meta property="article:modified_time" content="2020-08-07T03:12:49.700Z">
 <meta property="article:author" content="大丁">
-<meta property="article:tag" content="大丁 技术 生活">
+<meta property="article:tag" content="大O">
+<meta property="article:tag" content="时间复杂度">
+<meta property="article:tag" content="空间复杂度">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yudading.github.io/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0313.png">
   
     <link rel="alternative" href="/atom.xml" title="大丁的技术博客" type="application/atom+xml">
   
@@ -171,38 +177,103 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-算法与数据结构" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      算法与数据结构01
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+               阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+          
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
 
 <a href="/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
   	<time datetime="2020-08-07T02:26:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构01</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2423350&auto=1&height=66"></iframe>
 
-        <div class="article-info info-on-right">
-          
+<p>您好，我是大丁，今天说一说算法和数据结构。</p>
+<p>我打赌写程序的你，包括你身边的，可能对算法和数据结构的掌握情况可以只限于“学过”。 而且很多人在工作中都几乎不用，编好的程序只要没有bug，能运行，功能上能实现就算是OK了。</p>
+<p>从来没有想过怎么优化代码，上线后是否会对服务器造成多大的影响，都不会认真考虑，我为什么知道呢？因为我做过运维，哈哈！</p>
+<p>数据结构和算法是一项基本功，学好了无往不利。这是让人提升的一项利器，也是你能从一帮平凡程序员中挣脱出来站在一定高度的至宝，所以极有必要好好掌握到最佳。</p>
+<p>所以大厂面试时都会问到，如果你想去大厂，那么还等什么呢？</p>
+<h2 id="简单理解"><a href="#简单理解" class="headerlink" title="简单理解"></a>简单理解</h2><p>数据结构就是针对数据存储的一种形式，算法就是如何操作这些形式的数据。要不同条件下，同一段代码可能产生不同的时间复杂度、空间复杂度，所以要选最优。</p>
+<h2 id="怎么学？"><a href="#怎么学？" class="headerlink" title="怎么学？"></a>怎么学？</h2><p>了解基本理论后就要不断的动手，去刷题吧！</p>
+<h2 id="大-O-时间复杂度表示法"><a href="#大-O-时间复杂度表示法" class="headerlink" title="大 O 时间复杂度表示法"></a>大 O 时间复杂度表示法</h2><p>大 O 表示法就是指出算法的速度有多快，程序中采用不同的逻辑可以造成不一样的运行时间。</p>
+<h3 id="加法法则"><a href="#加法法则" class="headerlink" title="加法法则"></a>加法法则</h3><p>总复杂度等于量级最大的那段代码的复杂度</p>
+<h3 id="乘法法则"><a href="#乘法法则" class="headerlink" title="乘法法则"></a>乘法法则</h3><p>嵌套代码的复杂度等于嵌套内外代码复杂度的乘积</p>
+<h3 id="复杂度量级"><a href="#复杂度量级" class="headerlink" title="复杂度量级"></a>复杂度量级</h3><p><img src="/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0313.png" alt="0313"></p>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>时间复杂度的全称是渐进时间复杂度，表示算法的执行时间与数据规模之间的增长关系</p>
+<ul>
+<li>最好情况时间复杂度（best case time complexity）</li>
+<li>最坏情况时间复杂度（worst case time complexity）</li>
+<li>平均情况时间复杂度（average case time complexity）</li>
+<li>均摊时间复杂度（amortized time complexity）。</li>
+</ul>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>空间复杂度全称就是渐进空间复杂度，表示算法的存储空间与数据规模之间的增长关系</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的人生从此与众不同<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/154.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/033.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,7 +293,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -235,237 +306,117 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2020/08/06/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B001/" class="archive-article-date">
-  	<time datetime="2020-08-06T03:47:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/06/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据中台01</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/06/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B001/">数据中台01</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">什么是中台</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据中台//" class="article-tag-list-link color5">数据中台</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单理解"><span class="toc-number">1.</span> <span class="toc-text">简单理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么学？"><span class="toc-number">2.</span> <span class="toc-text">怎么学？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大-O-时间复杂度表示法"><span class="toc-number">3.</span> <span class="toc-text">大 O 时间复杂度表示法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加法法则"><span class="toc-number">3.1.</span> <span class="toc-text">加法法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#乘法法则"><span class="toc-number">3.2.</span> <span class="toc-text">乘法法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度量级"><span class="toc-number">3.3.</span> <span class="toc-text">复杂度量级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时间复杂度"><span class="toc-number">3.4.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空间复杂度"><span class="toc-number">3.5.</span> <span class="toc-text">空间复杂度</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/08/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/" class="archive-article-date">
-  	<time datetime="2020-08-05T13:52:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/05/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/">C语言学习笔记-01</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">玩转C语言程序设计</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">玩转C语言程序设计chapter1</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言学习笔记//" class="article-tag-list-link color3">C语言学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/" class="archive-article-date">
-  	<time datetime="2020-08-05T13:19:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/05/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%9801/">性能调优01</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">进程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">协程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能调优01//" class="article-tag-list-link color2">性能调优01</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/22/DevOps-01/" class="archive-article-date">
-  	<time datetime="2020-07-21T16:30:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/DevOps-01/">DevOps_01 DevOps是什么？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">DevOps</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">DevOps是什么？</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/DevOps//" class="article-tag-list-link color2">DevOps</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -500,8 +451,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
