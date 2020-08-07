@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yudading.github.io">
-  <title>标签 | 大丁的技术博客</title>
+  <title>Kubernetes00 | 大丁的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="拥抱技术，跳出六道">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://yudading.github.io/tags/index.html">
+  <meta name="description" content="您好，我是大丁，这次聊聊最火的发展方向 Kubernetes。 起源于容器容器是一种沙盒，如同集装箱，把应用装起来的一种技术，而对于容器中的所有应用都保持相对的独立，互相无干扰，使用哪个应用就用哪个，不受制别的应用。 容器的实现容器本质上依然是一个单进程，采用Cgroups来进行约束，Namespace修改进程。 Cgroups 即 Linux Control Group，主要作用就是限制一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kubernetes00">
+<meta property="og:url" content="https://yudading.github.io/2020/08/07/Kubernetes/index.html">
 <meta property="og:site_name" content="大丁的技术博客">
-<meta property="og:description" content="拥抱技术，跳出六道">
+<meta property="og:description" content="您好，我是大丁，这次聊聊最火的发展方向 Kubernetes。 起源于容器容器是一种沙盒，如同集装箱，把应用装起来的一种技术，而对于容器中的所有应用都保持相对的独立，互相无干扰，使用哪个应用就用哪个，不受制别的应用。 容器的实现容器本质上依然是一个单进程，采用Cgroups来进行约束，Namespace修改进程。 Cgroups 即 Linux Control Group，主要作用就是限制一个">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-17T12:01:28.000Z">
-<meta property="article:modified_time" content="2020-07-17T12:58:57.052Z">
+<meta property="article:published_time" content="2020-08-07T06:56:00.000Z">
+<meta property="article:modified_time" content="2020-08-07T07:27:09.638Z">
 <meta property="article:author" content="大丁">
-<meta property="article:tag" content="大丁 技术 生活">
+<meta property="article:tag" content="容器">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="大丁的技术博客" type="application/atom+xml">
@@ -173,14 +173,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="tags-" class="article article-type-tags " itemscope itemprop="blogPost">
+            <article id="post-Kubernetes" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      标签
+      Kubernetes00
     </h1>
   
 
@@ -202,15 +202,39 @@
 	</span>
 
 
-<a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2020-07-17T12:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
+<a href="/2020/08/07/Kubernetes/" class="archive-article-date">
+  	<time datetime="2020-08-07T06:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1374656&auto=1&height=66"></iframe>
+
+<p>您好，我是大丁，这次聊聊最火的发展方向 Kubernetes。</p>
+<h1 id="起源于容器"><a href="#起源于容器" class="headerlink" title="起源于容器"></a>起源于容器</h1><p>容器是一种沙盒，如同集装箱，把应用装起来的一种技术，而对于容器中的所有应用都保持相对的独立，互相无干扰，使用哪个应用就用哪个，不受制别的应用。</p>
+<h2 id="容器的实现"><a href="#容器的实现" class="headerlink" title="容器的实现"></a>容器的实现</h2><p>容器本质上依然是一个单进程，采用Cgroups来进行约束，Namespace修改进程。</p>
+<p>Cgroups 即 Linux Control Group，主要作用就是限制一个进程组能使用的资源上限，包括CPU、内存、磁盘、网络带宽等等。它的每个子系统也有资源限制的能力，可以限制 blkio、cpuset、memory。</p>
+<ul>
+<li>blkio 为块设备设定I/O限制，一般用于磁盘</li>
+<li>cpuset 为进程分配单独的CPU核和对应的内存节点</li>
+<li>memory 为进程设定内存使用的限制</li>
+</ul>
+<p>Namespace 修改应用进程，被操作系统做了限制，来看指定的内容。</p>
+<h2 id="容器的优点"><a href="#容器的优点" class="headerlink" title="容器的优点"></a>容器的优点</h2><ul>
+<li>敏捷</li>
+<li>高性能</li>
+</ul>
+<h2 id="rootfs（根文件系统）"><a href="#rootfs（根文件系统）" class="headerlink" title="rootfs（根文件系统）"></a>rootfs（根文件系统）</h2><p>rootfs 即容器镜像，rootfs<br>只是一个操作系统所包含的文件、配置和目录，并不包括操作系统内核。</p>
+<p>在 Linux 操作系统中，这两部分是分开存放的，操作系统只有在开机启动时才会加载指定版本的内核镜像。</p>
+<h3 id="rootfs-功能"><a href="#rootfs-功能" class="headerlink" title="rootfs 功能"></a>rootfs 功能</h3><p>保持容器的一致性</p>
+<h3 id="rootfs-包括三部分："><a href="#rootfs-包括三部分：" class="headerlink" title="rootfs 包括三部分："></a>rootfs 包括三部分：</h3><ul>
+<li>只读层</li>
+<li>可读写层</li>
+<li>Init层</li>
+</ul>
+
       
 
       
@@ -249,7 +273,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">容器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Kubernetes//" class="article-tag-list-link color1">Kubernetes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -299,7 +345,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/2020/08/07/Kubernetes/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -311,6 +357,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/07/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法与数据结构01</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -332,7 +388,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#起源于容器"><span class="toc-number">1.</span> <span class="toc-text">起源于容器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#容器的实现"><span class="toc-number">1.1.</span> <span class="toc-text">容器的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器的优点"><span class="toc-number">1.2.</span> <span class="toc-text">容器的优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootfs（根文件系统）"><span class="toc-number">1.3.</span> <span class="toc-text">rootfs（根文件系统）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rootfs-功能"><span class="toc-number">1.3.1.</span> <span class="toc-text">rootfs 功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rootfs-包括三部分："><span class="toc-number">1.3.2.</span> <span class="toc-text">rootfs 包括三部分：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -386,7 +442,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
