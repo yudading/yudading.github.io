@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-07T07:27:09.638Z</updated>
+  <updated>2020-08-07T07:56:42.785Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kubernetes01</title>
+    <link href="https://yudading.github.io/2020/08/07/Kubernetes01/"/>
+    <id>https://yudading.github.io/2020/08/07/Kubernetes01/</id>
+    <published>2020-08-07T07:30:24.000Z</published>
+    <updated>2020-08-07T07:56:42.785Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=17245428&auto=1&height=66"></iframe><p>大家好，我是大丁，一起看一下K8S的知识图谱。</p><h1 id="K8S的知识图谱"><a href="#K8S的知识图谱" class="headerlink" title="K8S的知识图谱"></a>K8S的知识图谱</h1><ul><li>Container basics 容器基础技术</li><li>Kubernetes 作业管理</li><li>Kubernetes 应用配置</li><li>Kubernetes 安装与运维</li><li>Kubernetes 扩展与插件</li><li>Kubernetes CI/CD</li><li>Kubernetes Paas</li><li>Kubernetes 架构（Kubelet and Master）</li></ul><p><img src="/2020/08/07/Kubernetes01/4514.png" alt="4514"></p><p><strong>图片链接：</strong></p><p><a href="https://time.geekbang.org/column/article/17921" target="_blank" rel="noopener">k8s知识图谱链接</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="Kubernetes" scheme="https://yudading.github.io/categories/Kubernetes/"/>
+    
+    
+      <category term="知识图谱" scheme="https://yudading.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>Kubernetes00</title>
