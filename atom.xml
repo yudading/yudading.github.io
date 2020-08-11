@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-11T06:35:11.966Z</updated>
+  <updated>2020-08-11T07:05:23.196Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发系统01</title>
+    <link href="https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F01/"/>
+    <id>https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F01/</id>
+    <published>2020-08-11T06:37:30.000Z</published>
+    <updated>2020-08-11T07:05:23.196Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2313097&auto=1&height=66"></iframe><h2 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h2><p>将整体系统拆分成 N 个层次，每个层次有独立的职责，多个层次协同提供完整的功能</p><h4 id="第一种-MVC-架构"><a href="#第一种-MVC-架构" class="headerlink" title="第一种 MVC 架构"></a>第一种 MVC 架构</h4><p>将整体的系统分成了 Model（模型），View（视图）和 Controller（控制器）三个层次，也就是将用户视图和业务处理隔离开，并且通过控制器连接起来，很好地实现了表现和逻辑的解耦，是一种标准的软件分层架构</p><p><img src="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F01/4202.png" alt="4202"></p><h4 id="第二种架构"><a href="#第二种架构" class="headerlink" title="第二种架构"></a>第二种架构</h4><ul><li>表现层</li><li>逻辑层</li><li>数据访问层</li></ul><p><img src="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F01/4533.png" alt="4533"></p><h4 id="第三种网络分层"><a href="#第三种网络分层" class="headerlink" title="第三种网络分层"></a>第三种网络分层</h4><p><img src="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F01/5244.png" alt="5244"></p><h3 id="分层的好处"><a href="#分层的好处" class="headerlink" title="分层的好处"></a>分层的好处</h3><ul><li>可以简化系统设计，让不同的人专注做某一层次的事情</li><li>可以做到很高的复用</li><li>更容易做横向扩展</li></ul><h2 id="阿里系统的分层"><a href="#阿里系统的分层" class="headerlink" title="阿里系统的分层"></a>阿里系统的分层</h2><ul><li>终端显示层：各端模板渲染并执行显示的层。当前主要是 Velocity 渲染，JS 渲染， JSP 渲染，移动端展示等。</li><li>开放接口层：将 Service 层方法封装成开放接口，同时进行网关安全控制和流量控制等。</li><li>Web 层：主要是对访问控制进行转发，各类基本参数校验，或者不复用的业务简单处理等。</li><li>Service 层：业务逻辑层。</li><li>Manager 层：通用业务处理层。这一层主要有两个作用，其一，你可以将原先 Service 层的一些通用能力下沉到这一层，比如与缓存和存储交互策略，中间件的接入；其二，你也可以在这一层封装对第三方接口的调用，比如调用支付服务，调用审核服务等。</li><li>DAO 层：数据访问层，与底层 MySQL、Oracle、HBase 等进行数据交互。</li><li>外部接口或第三方平台：包括其它部门 RPC 开放接口，基础平台，其它公司的 HTTP 接口。</li></ul><p><img src="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F01/0058.png" alt="0058"></p><h3 id="分层带来的缺点"><a href="#分层带来的缺点" class="headerlink" title="分层带来的缺点"></a>分层带来的缺点</h3><ul><li>增加了代码的复杂度</li><li>引起性能上的不足</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="高并发系统" scheme="https://yudading.github.io/categories/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="分层设计的好处" scheme="https://yudading.github.io/tags/%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%A5%BD%E5%A4%84/"/>
+    
+      <category term="分层设计的缺点" scheme="https://yudading.github.io/tags/%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%BC%BA%E7%82%B9/"/>
+    
+      <category term="阿里系统的分层" scheme="https://yudading.github.io/tags/%E9%98%BF%E9%87%8C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E5%B1%82/"/>
+    
+  </entry>
   
   <entry>
     <title>高并发系统00</title>
