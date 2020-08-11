@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-07T08:50:08.126Z</updated>
+  <updated>2020-08-11T06:35:11.966Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发系统00</title>
+    <link href="https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F00/"/>
+    <id>https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F00/</id>
+    <published>2020-08-11T06:15:09.000Z</published>
+    <updated>2020-08-11T06:35:11.966Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27102079&auto=1&height=66"></iframe><h1 id="高并发系统"><a href="#高并发系统" class="headerlink" title="高并发系统"></a>高并发系统</h1><h2 id="高并发的重要方法"><a href="#高并发的重要方法" class="headerlink" title="高并发的重要方法"></a>高并发的重要方法</h2><ul><li>横向扩展</li><li>缓存</li><li>异步处理</li></ul><h3 id="横向扩展"><a href="#横向扩展" class="headerlink" title="横向扩展"></a>横向扩展</h3><p>采用分布式部署的方式把流量分流开。</p><h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>任何降低响应时间的中间存储都称为缓存。</p><h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><p>未处理完成之前我们可以让请求先返回，在数据准备好之后再通知请求方，这样可以在单位时间内处理更多的请求。</p><p><strong>那么什么是同步，什么是异步呢？</strong></p><p>以方法调用为例，同步调用代表调用方要阻塞等待被调用方法中的逻辑执行完成。这种方式下，当被调用方法响应时间较长时，会造成调用方长久的阻塞，在高并发下会造成整体系统性能下降甚至发生雪崩。</p><p>异步调用恰恰相反，调用方不需要等待方法逻辑执行完成就可以返回执行其他的逻辑，在被调用方法执行完毕后再通过回调、事件通知等方式将结果反馈给调用方。</p><p><img src="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F00/2351.png" alt="2351"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="高并发系统" scheme="https://yudading.github.io/categories/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="横向扩展" scheme="https://yudading.github.io/tags/%E6%A8%AA%E5%90%91%E6%89%A9%E5%B1%95/"/>
+    
+      <category term="缓存" scheme="https://yudading.github.io/tags/%E7%BC%93%E5%AD%98/"/>
+    
+      <category term="异步" scheme="https://yudading.github.io/tags/%E5%BC%82%E6%AD%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Kubernetes03</title>
