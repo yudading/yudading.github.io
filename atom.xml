@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-11T07:49:23.078Z</updated>
+  <updated>2020-08-11T08:07:57.568Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发系统04</title>
+    <link href="https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F04/"/>
+    <id>https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F04/</id>
+    <published>2020-08-11T07:55:36.000Z</published>
+    <updated>2020-08-11T08:07:57.568Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2328860&auto=1&height=66"></iframe><h2 id="高可扩展性的设计"><a href="#高可扩展性的设计" class="headerlink" title="高可扩展性的设计"></a>高可扩展性的设计</h2><p>需要站在整体架构的角度，而不仅仅是业务服务器的角度来考虑系统的扩展性，</p><p>数据库、缓存、依赖的第三方、负载均衡、交换机带宽等等都是系统扩展时需要考虑的因素，</p><p>因为系统并发到了某一个量级之后，哪一个因素会成为我们的瓶颈点，从而针对性地进行扩展。</p><ol><li>存储层的扩展性 </li></ol><ul><li><p>存储拆分首先考虑的维度是业务维度</p></li><li><p>统运行时间长了之后，单一的业务数据库在容量和并发请求量上仍然会超过单机的限制。这时，我们就需要针对数据库做第二次拆分。</p></li></ul><ol start="2"><li>业务层的扩展性</li></ol><ul><li>业务维度</li><li>重要性维度</li><li>请求来源维度</li></ul><p>首先，我们需要把相同业务的服务拆分成单独的业务池，</p><p>除此之外，我们还可以根据业务接口的重要程度，把业务分为核心池和非核心池，</p><p>最后，你还可以根据接入客户端类型的不同做业务池的拆分。</p><p><strong>总结：</strong></p><p>未做拆分的系统虽然可扩展性不强，但是却足够简单，无论是系统开发还是运行维护都不需要投入很大的精力。</p><p>拆分之后，需求开发需要横跨多个系统多个小团队，排查问题也需要涉及多个系统，运行维护上，可能每个子系统都需要有专人来负责，对于团队是一个比较大的考验。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="高并发系统" scheme="https://yudading.github.io/categories/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="高可扩展性的设计" scheme="https://yudading.github.io/tags/%E9%AB%98%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7%E7%9A%84%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="存储层的扩展性" scheme="https://yudading.github.io/tags/%E5%AD%98%E5%82%A8%E5%B1%82%E7%9A%84%E6%89%A9%E5%B1%95%E6%80%A7/"/>
+    
+      <category term="业务层的扩展性" scheme="https://yudading.github.io/tags/%E4%B8%9A%E5%8A%A1%E5%B1%82%E7%9A%84%E6%89%A9%E5%B1%95%E6%80%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>高并发系统03</title>
