@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-13T08:10:51.908Z</updated>
+  <updated>2020-08-13T08:31:42.047Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发系统07</title>
+    <link href="https://yudading.github.io/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F07/"/>
+    <id>https://yudading.github.io/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F07/</id>
+    <published>2020-08-13T08:13:04.000Z</published>
+    <updated>2020-08-13T08:31:42.047Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2004216&auto=1&height=66"></iframe><h2 id="数据库优化-分库分表"><a href="#数据库优化-分库分表" class="headerlink" title="数据库优化 分库分表"></a>数据库优化 分库分表</h2><h3 id="数据库做垂直拆分"><a href="#数据库做垂直拆分" class="headerlink" title="数据库做垂直拆分"></a>数据库做垂直拆分</h3><p>数据被分配到多个数据库节点上，那么数据的写入请求也从请求单一主库变成了请求多个数据分片节点，在一定程度上也会提升并发写入的性能。</p><p><img src="/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F07/1809.png" alt="1809"></p><p>数据库垂直拆分后依然不能解决某一个业务模块的数据大量膨胀的问题，一旦你的系统遭遇某一个业务库的数据量暴增，在这个情况下，你还需要继续寻找可以弥补的方式</p><h3 id="数据库做水平拆分"><a href="#数据库做水平拆分" class="headerlink" title="数据库做水平拆分"></a>数据库做水平拆分</h3><p>垂直拆分的关注点在于业务相关性，而水平拆分指的是将单一数据表按照某一种规则拆分到多个数据库和多个数据表中，关注点在数据的特点</p><p><strong>拆分的规则有下面这两种：</strong></p><ul><li>按照某一个字段的哈希值做拆分，这种拆分规则比较适用于实体表，比如说用户表，内容表，我们一般按照这些实体表的 ID 字段来拆分</li></ul><p><img src="/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F07/2539.png" alt="2539"></p><ul><li>另一种比较常用的是按照某一个字段的区间来拆分，比较常用的是时间字段</li></ul><p><img src="/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F07/2600.png" alt="2600"></p><h3 id="分库分表的原则主要有以下几点："><a href="#分库分表的原则主要有以下几点：" class="headerlink" title="分库分表的原则主要有以下几点："></a>分库分表的原则主要有以下几点：</h3><ol><li>如果在性能上没有瓶颈点那么就尽量不做分库分表；</li><li>如果要做，就尽量一次到位，比如说 16 库，每个库 64 表就基本能够满足几年内你的业务的需求。</li><li>很多的 NoSQL 数据库，例如 Hbase，MongoDB 都提供 auto sharding 的特性，如果你的团队内部对于这些组件比较熟悉，有较强的运维能力，那么也可以考虑使用这些 NoSQL 数据库替代传统的关系型数据库。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="高并发系统" scheme="https://yudading.github.io/categories/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="数据库做垂直拆分" scheme="https://yudading.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%81%9A%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86/"/>
+    
+      <category term="数据库做水平拆分" scheme="https://yudading.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%81%9A%E6%B0%B4%E5%B9%B3%E6%8B%86%E5%88%86/"/>
+    
+      <category term="哈希值做拆分" scheme="https://yudading.github.io/tags/%E5%93%88%E5%B8%8C%E5%80%BC%E5%81%9A%E6%8B%86%E5%88%86/"/>
+    
+      <category term="区间来拆分" scheme="https://yudading.github.io/tags/%E5%8C%BA%E9%97%B4%E6%9D%A5%E6%8B%86%E5%88%86/"/>
+    
+      <category term="分库分表的原则" scheme="https://yudading.github.io/tags/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E7%9A%84%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
   
   <entry>
     <title>高并发系统06</title>
