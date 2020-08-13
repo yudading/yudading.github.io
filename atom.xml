@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-11T08:07:57.568Z</updated>
+  <updated>2020-08-13T07:44:42.527Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发系统05</title>
+    <link href="https://yudading.github.io/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F05/"/>
+    <id>https://yudading.github.io/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F05/</id>
+    <published>2020-08-13T07:27:42.000Z</published>
+    <updated>2020-08-13T07:44:42.527Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=5212440&auto=1&height=66"></iframe><h2 id="池化技术"><a href="#池化技术" class="headerlink" title="池化技术"></a>池化技术</h2><h3 id="数据库连接池有两个最重要的配置："><a href="#数据库连接池有两个最重要的配置：" class="headerlink" title="数据库连接池有两个最重要的配置："></a>数据库连接池有两个最重要的配置：</h3><p><strong>最小连接数和最大连接数</strong></p><p><strong>它们控制着从连接池中获取连接的流程：</strong></p><p>-如果当前连接数小于最小连接数，则创建新的连接处理数据库请求；</p><p>-如果连接池中有空闲连接则复用空闲连接；</p><p>-如果空闲池中没有连接并且当前连接数小于最大连接数，则创建新的连接处理请求；</p><p>-如果当前连接数已经大于等于最大连接数，则按照配置中设定的时间（C3P0 的连接池配置是 checkoutTimeout）等待旧的连接可用；</p><p>-如果等待超过了这个设定时间则向用户抛出错误。</p><h3 id="用线程池预先创建线程"><a href="#用线程池预先创建线程" class="headerlink" title="用线程池预先创建线程"></a>用线程池预先创建线程</h3><ul><li>如果线程池中的线程数少于 coreThreadCount 时，处理新的任务时会创建新的线程；</li><li>如果线程数大于 coreThreadCount 则把任务丢到一个队列里面，由当前空闲的线程执行；</li><li>当队列中的任务堆积满了的时候，则继续创建线程，直到达到 maxThreadCount；</li><li>当线程数达到 maxTheadCount 时还有新的任务提交，那么我们就不得不将它们丢弃了。</li></ul><p><img src="/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F05/3913.png" alt="3913"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="高并发系统" scheme="https://yudading.github.io/categories/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="数据库连接池" scheme="https://yudading.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
+    
+      <category term="最小连接数" scheme="https://yudading.github.io/tags/%E6%9C%80%E5%B0%8F%E8%BF%9E%E6%8E%A5%E6%95%B0/"/>
+    
+      <category term="最大连接数" scheme="https://yudading.github.io/tags/%E6%9C%80%E5%A4%A7%E8%BF%9E%E6%8E%A5%E6%95%B0/"/>
+    
+      <category term="JDK 线程池提交任务示意图" scheme="https://yudading.github.io/tags/JDK-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%8F%90%E4%BA%A4%E4%BB%BB%E5%8A%A1%E7%A4%BA%E6%84%8F%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>高并发系统04</title>
