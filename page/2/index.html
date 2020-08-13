@@ -173,6 +173,118 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/07/Kubernetes/">Kubernetes00</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        
+
+<a href="/2020/08/07/Kubernetes/" class="archive-article-date">
+  	<time datetime="2020-08-07T06:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1374656&auto=1&height=66"></iframe>
+
+<p>您好，我是大丁，这次聊聊最火的发展方向 Kubernetes。</p>
+<h1 id="起源于容器"><a href="#起源于容器" class="headerlink" title="起源于容器"></a>起源于容器</h1><p>容器是一种沙盒，如同集装箱，把应用装起来的一种技术，而对于容器中的所有应用都保持相对的独立，互相无干扰，使用哪个应用就用哪个，不受制别的应用。</p>
+<h2 id="容器的实现"><a href="#容器的实现" class="headerlink" title="容器的实现"></a>容器的实现</h2><p>容器本质上依然是一个单进程，采用Cgroups来进行约束，Namespace修改进程。</p>
+<p>Cgroups 即 Linux Control Group，主要作用就是限制一个进程组能使用的资源上限，包括CPU、内存、磁盘、网络带宽等等。它的每个子系统也有资源限制的能力，可以限制 blkio、cpuset、memory。</p>
+<ul>
+<li>blkio 为块设备设定I/O限制，一般用于磁盘</li>
+<li>cpuset 为进程分配单独的CPU核和对应的内存节点</li>
+<li>memory 为进程设定内存使用的限制</li>
+</ul>
+<p>Namespace 修改应用进程，被操作系统做了限制，来看指定的内容。</p>
+<h2 id="容器的优点"><a href="#容器的优点" class="headerlink" title="容器的优点"></a>容器的优点</h2><ul>
+<li>敏捷</li>
+<li>高性能</li>
+</ul>
+<h2 id="rootfs（根文件系统）"><a href="#rootfs（根文件系统）" class="headerlink" title="rootfs（根文件系统）"></a>rootfs（根文件系统）</h2><p>rootfs 即容器镜像，rootfs<br>只是一个操作系统所包含的文件、配置和目录，并不包括操作系统内核。</p>
+<p>在 Linux 操作系统中，这两部分是分开存放的，操作系统只有在开机启动时才会加载指定版本的内核镜像。</p>
+<h3 id="rootfs-功能"><a href="#rootfs-功能" class="headerlink" title="rootfs 功能"></a>rootfs 功能</h3><p>保持容器的一致性</p>
+<h3 id="rootfs-包括三部分："><a href="#rootfs-包括三部分：" class="headerlink" title="rootfs 包括三部分："></a>rootfs 包括三部分：</h3><ul>
+<li>只读层</li>
+<li>可读写层</li>
+<li>Init层</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">容器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Kubernetes//" class="article-tag-list-link color1">Kubernetes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/07/Kubernetes/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-算法与数据结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -946,18 +1058,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DevOps</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DevOps是什么？</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">玩转C语言程序设计</a>
               </li>
              
@@ -966,11 +1066,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kubernetes 本质</a>
+                <a href="javascript:void(0)" class="js-tag color3">容器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识图谱</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">k8s布署</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -986,7 +1090,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DevOps</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DevOps是什么？</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">什么是中台</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kubernetes 本质</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1014,10 +1130,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">k8s布署</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">分层设计的好处</a>
               </li>
              
@@ -1027,30 +1139,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">阿里系统的分层</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">高性能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">高可用</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">可扩展</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">性能的度量指标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CPU 密集型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">IO 密集型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1086,6 +1174,42 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">高性能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">高可用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">可扩展</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">性能的度量指标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CPU 密集型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">IO 密集型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">高可扩展性的设计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">存储层的扩展性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">业务层的扩展性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">数据库连接池</a>
               </li>
              
@@ -1102,15 +1226,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">高可扩展性的设计</a>
+                <a href="javascript:void(0)" class="js-tag color3">主从读写的两个技术关键点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">存储层的扩展性</a>
+                <a href="javascript:void(0)" class="js-tag color3">主从复制的缺陷</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">业务层的扩展性</a>
+                <a href="javascript:void(0)" class="js-tag color3">如何降低复杂度</a>
               </li>
             
             <div class="clearfix"></div>
