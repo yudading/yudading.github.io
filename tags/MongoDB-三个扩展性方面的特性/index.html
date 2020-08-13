@@ -6,29 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yudading.github.io">
-  <title>高并发系统03 | 大丁的技术博客</title>
+  <title>Tag: MongoDB 三个扩展性方面的特性 | 大丁的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="高可用性指的是系统具备较高的无故障运行的能力 可用性的度量 MTBF（Mean Time Between Failure）是平均故障间隔的意思，代表两次故障的间隔时间，也就是系统正常运转的平均时间。这个时间越长，系统稳定性越高 MTTR（Mean Time To Repair）表示故障的平均恢复时间，也可以理解为平均故障时间。这个值越小，故障对于用户的影响越小   高可用系统设计的思路 系统设">
-<meta property="og:type" content="article">
-<meta property="og:title" content="高并发系统03">
-<meta property="og:url" content="https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F03/index.html">
+  <meta name="description" content="拥抱技术，跳出六道">
+<meta property="og:type" content="website">
+<meta property="og:title" content="大丁的技术博客">
+<meta property="og:url" content="https://yudading.github.io/tags/MongoDB-%E4%B8%89%E4%B8%AA%E6%89%A9%E5%B1%95%E6%80%A7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%89%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="大丁的技术博客">
-<meta property="og:description" content="高可用性指的是系统具备较高的无故障运行的能力 可用性的度量 MTBF（Mean Time Between Failure）是平均故障间隔的意思，代表两次故障的间隔时间，也就是系统正常运转的平均时间。这个时间越长，系统稳定性越高 MTTR（Mean Time To Repair）表示故障的平均恢复时间，也可以理解为平均故障时间。这个值越小，故障对于用户的影响越小   高可用系统设计的思路 系统设">
+<meta property="og:description" content="拥抱技术，跳出六道">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F03/3715.png">
-<meta property="article:published_time" content="2020-08-11T07:30:45.000Z">
-<meta property="article:modified_time" content="2020-08-11T07:49:23.078Z">
 <meta property="article:author" content="大丁">
-<meta property="article:tag" content="MTBF">
-<meta property="article:tag" content="MTTR">
-<meta property="article:tag" content="failover">
-<meta property="article:tag" content="超时控制">
-<meta property="article:tag" content="降级">
-<meta property="article:tag" content="限流">
-<meta property="article:tag" content="灰度发布">
-<meta property="article:tag" content="故障演练">
+<meta property="article:tag" content="大丁 技术 生活">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F03/3715.png">
   
     <link rel="alternative" href="/atom.xml" title="大丁的技术博客" type="application/atom+xml">
   
@@ -182,163 +171,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-高并发系统03" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      高并发系统03
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+
+<a href="/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F09/" class="archive-article-date">
+  	<time datetime="2020-08-13T08:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/08/13/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F09/">高并发系统09</a>
     </h1>
   
 
-        <!--显示阅读次数-->
-        
-          <br/>
-          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-          <span class="icon-sort"></span>
-          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-               阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-          </span>
-          </a>
+        <div class="article-info info-on-right">
           
-        
-        
-	<!-- 不蒜子统计 -->
-	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-	</span>
-
-
-<a href="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F03/" class="archive-article-date">
-  	<time datetime="2020-08-11T07:30:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=20592011&auto=1&height=66"></iframe>
-
-<h2 id="高可用性"><a href="#高可用性" class="headerlink" title="高可用性"></a>高可用性</h2><p>指的是系统具备较高的无故障运行的能力</p>
-<h3 id="可用性的度量"><a href="#可用性的度量" class="headerlink" title="可用性的度量"></a>可用性的度量</h3><ul>
-<li>MTBF（Mean Time Between Failure）是平均故障间隔的意思，代表两次故障的间隔时间，也就是系统正常运转的平均时间。这个时间越长，系统稳定性越高</li>
-<li>MTTR（Mean Time To Repair）表示故障的平均恢复时间，也可以理解为平均故障时间。这个值越小，故障对于用户的影响越小</li>
-</ul>
-<p><img src="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F03/3715.png" alt="3715"></p>
-<h2 id="高可用系统设计的思路"><a href="#高可用系统设计的思路" class="headerlink" title="高可用系统设计的思路"></a>高可用系统设计的思路</h2><ol>
-<li>系统设计</li>
-</ol>
-<p><strong>failover（故障转移</strong>）</p>
-<p>一般来说，发生 failover 的节点可能有两种情况：</p>
-<p>一是在完全对等的节点之间做 failover。</p>
-<p>二是在不对等的节点之间，即系统中存在主节点也存在备节点。</p>
-<p><strong>超时控制</strong></p>
-<p>收集系统之间的调用日志，统计比如说 99% 的响应时间是怎样的，然后依据这个时间来指定超时时间。</p>
-<p>如果没有调用的日志，那么你只能按照经验值来指定超时时间。</p>
-<p>不过，无论你使用哪种方式，超时时间都不是一成不变的，需要在后面的系统维护过程中不断地修改。</p>
-<p><strong>降级</strong></p>
-<p>降级是为了保证核心服务的稳定而牺牲非核心服务的做法</p>
-<p><strong>限流</strong></p>
-<p>限流完全是另外一种思路，它通过对并发的请求进行限速来保护系统</p>
-<ol start="2">
-<li>系统运维</li>
-</ol>
-<p><strong>灰度发布</strong></p>
-<p>灰度发布指的是系统的变更不是一次性地推到线上的，而是按照一定比例逐步推进的</p>
-<p><strong>故障演练</strong></p>
-<p>故障演练指的是对系统进行一些破坏性的手段，观察在出现局部故障时，整体的系统表现是怎样的，从而发现系统中存在的，潜在的可用性问题</p>
-<p><strong>开发和运维角度上来看</strong>，提升可用性的方法是不同的：</p>
-<ul>
-<li><p><strong>开发注重的</strong>是如何处理故障，关键词是冗余和取舍。冗余指的是有备用节点，集群来顶替出故障的服务，比如文中提到的故障转移，还有多活架构等等；取舍指的是丢卒保车，保障主体服务的安全。</p>
-</li>
-<li><p><strong>从运维角度来看</strong>则更偏保守，注重的是如何避免故障的发生，比如更关注变更管理以及如何做故障的演练。</p>
-</li>
-</ul>
-<p>两者结合起来才能组成一套完善的高可用体系。</p>
-<p><strong>需要注意的是</strong>：</p>
-<p>提高系统的可用性有时候是以牺牲用户体验或者是牺牲系统性能为前提的，也需要大量人力来建设相应的系统，完善机制。所以我们要把握一个度，不该做过度的优化；</p>
-<p>可用性和性能有时候是需要做取舍的，但如何取舍就要视不同的系统而定。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的人生从此与众不同<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/154.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/033.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MTBF</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NoSQL 数据库多种类型</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MTTR</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">NoSQL 提升写入性能</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">failover</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">超时控制</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">降级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">限流</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">灰度发布</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">故障演练</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MongoDB 三个扩展性方面的特性</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -351,126 +235,17 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yudading.github.io/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F03/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F04/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          高并发系统04
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/11/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F02/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">高并发系统02</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#高可用性"><span class="toc-number">1.</span> <span class="toc-text">高可用性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#可用性的度量"><span class="toc-number">1.1.</span> <span class="toc-text">可用性的度量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高可用系统设计的思路"><span class="toc-number">2.</span> <span class="toc-text">高可用系统设计的思路</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -505,9 +280,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
