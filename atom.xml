@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yudading.github.io/"/>
-  <updated>2020-08-13T09:05:45.249Z</updated>
+  <updated>2020-08-17T03:18:54.862Z</updated>
   <id>https://yudading.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分布式缓存00 缓存的定义和分类</title>
+    <link href="https://yudading.github.io/2020/08/17/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%9800-%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%86%E7%B1%BB/"/>
+    <id>https://yudading.github.io/2020/08/17/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%9800-%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%86%E7%B1%BB/</id>
+    <published>2020-08-17T03:09:34.000Z</published>
+    <updated>2020-08-17T03:18:54.862Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1436150979&auto=1&height=66"></iframe><h1 id="什么是缓存"><a href="#什么是缓存" class="headerlink" title="什么是缓存"></a>什么是缓存</h1><p>维基百科上的缓存：</p><p>存储在计算机上的一个原始数据复制集，以便于访问。</p><p>常见的如：</p><ol><li>CPU 缓存</li></ol><p>在CPU与内存之间的临时存储器，虽然容量小，但是交换速度很快，优于内存的存储速度。一部份内存中的数据放在缓存中，这样CPU访问时，读取速度就很快了。现在的CPU都是具有几级的缓存。</p><ol start="2"><li>Linux 操作系统中的文件缓存</li></ol><p>在我们请求一个网页时，页的虚拟地址转化为页的物理地址。而页表和内存管理单元就将页的虚拟地址映射成为物理地址。</p><p><img src="/2020/08/17/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%9800-%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%86%E7%B1%BB/20200817102325.png" alt="20200817102325"></p><h2 id="缓存的分类"><a href="#缓存的分类" class="headerlink" title="缓存的分类"></a>缓存的分类</h2><p>根据缓存的应用，可以分为：客户端缓存、服务端缓存、网络中的缓存</p><p><img src="/2020/08/17/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%9800-%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%86%E7%B1%BB/20200817102416.png" alt="20200817102416"></p><p>缓存的规模上，可分为：单体缓存、缓存集群、分布式缓存，对于互联网公司，都采用了分布式缓存来解决读取的问题，而这一切就是为了客户。    </p><p><img src="/2020/08/17/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%9800-%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%86%E7%B1%BB/20200817102429.png" alt="20200817102429"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+      
+    
+    </summary>
+    
+    
+      <category term="分布式缓存" scheme="https://yudading.github.io/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/"/>
+    
+    
+      <category term="缓存定义" scheme="https://yudading.github.io/tags/%E7%BC%93%E5%AD%98%E5%AE%9A%E4%B9%89/"/>
+    
+      <category term="缓存分类" scheme="https://yudading.github.io/tags/%E7%BC%93%E5%AD%98%E5%88%86%E7%B1%BB/"/>
+    
+      <category term="CPU 缓存" scheme="https://yudading.github.io/tags/CPU-%E7%BC%93%E5%AD%98/"/>
+    
+      <category term="Linux 操作系统中的文件缓存" scheme="https://yudading.github.io/tags/Linux-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
   
   <entry>
     <title>高并发系统09</title>
